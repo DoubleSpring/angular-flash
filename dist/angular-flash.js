@@ -1,4 +1,4 @@
-/*! angular-flash - v1.0.0 - 2015-03-19
+/*! angular-flash - v1.1.1 - 2015-09-07
 * https://github.com/sachinchoolur/angular-flash
 * Copyright (c) 2015 Sachin; Licensed MIT */
 (function() {
@@ -43,7 +43,7 @@
     app.directive('flashMessage', ['$compile', '$rootScope', function($compile, $rootScope) {
         return {
             restrict: 'A',
-            template: '<div role="alert" ng-show="hasFlash" class="alert {{flash.addClass}} alert-{{flash.type}} alert-dismissible ng-hide alertIn alertOut "> <span dynamic="flash.text"></span> <button type="button" class="close" close-flash><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> </div>',
+            template: '<div role="alert" ng-show="hasFlash" class="alert tw-ng-animate {{flash.addClass}} alert-{{flash.type}} alert-dismissible ng-hide alertIn alertOut "> <span dynamic="flash.text"></span> <button type="button" class="close" close-flash><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> </div>',
             link: function(scope, ele, attrs) {
                 // get timeout value from directive attribute and set to flash timeout
                 $rootScope.flash.timeout = parseInt(attrs.flashMessage, 10);
